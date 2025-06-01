@@ -79,9 +79,17 @@ python books.py
 
 ### Backend 
 
-6. Configure the mcp server in: `backend/elasticsearch_mcp.json`:
+6. Configure the mcp server in: `backend/elasticsearch_mcp.json` and establish the connection to your Azure endpoint:
 
 - Modify elasticsearch_mcp to include your ES credentials. The API key should have relevant permissions. See: https://github.com/elastic/mcp-server-elasticsearch?tab=readme-ov-file
+- Modify the following to reflect your Azure OpenAI deployment settings in server.py:
+
+```
+llm = AzureChatOpenAI(
+        openai_api_version="2025-01-01-preview",
+        azure_deployment="gpt-4o",
+        azure_endpoint="https://",
+```
 
 7. Start the backend
 
