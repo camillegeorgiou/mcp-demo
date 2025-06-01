@@ -43,14 +43,14 @@ Pre-reqs:
 
 ### Set Up and Data Ingest
 
-1. Clone the repository
+1. Clone down the repository and navigate to the mcp-demo folder:
 
 ```
 git https://github.com/camillegeorgiou/mcp-demo
 cd mcp-demo
 ```
 
-2. Set up the Python backend
+2. Set up the Python backend:
 
 ```
 python -m venv .venv
@@ -58,7 +58,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Modify .env file
+3. Modify the .env file to include your credentials:
 
 ```
 AZURE_OPENAI_API_KEY=your_azure_openai_key
@@ -66,31 +66,41 @@ ES_URL=your_elastic_url
 ES_API_KEY=elastic_api
 ```
 
-4. Navigate to kaggle, spin up an account and download an api key
-- alternatiely, you can download the books csv and modify the script to push the dataset to Elastic.
+4. Navigate to kaggle, spin up an account and download an API key:
+- Add the downloaded kaggle.json file to `.kaggle`
 
-5. Run the books.py and confirm data has made it into your cluster.
+**Alternatiely, you can download the books.csv and modify the script to push the dataset to Elastic.
+
+5. Run the books.py script and confirm data has made it into your cluster:
+
+```
+python books.py
+```
 
 ### Backend 
 
-6. Add MCP config to backend/elasticsearch_mcp.json
+6. Configure the mcp server in: `backend/elasticsearch_mcp.json`:
+
 - Modify elasticsearch_mcp to include your ES credentials. The API key should have relevant permissions. See: https://github.com/elastic/mcp-server-elasticsearch?tab=readme-ov-file
 
 7. Start the backend
+
 ```
 uvicorn backend.server:app --reload
 ```
 
 - You should see the following output (or similar):
-
+```
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 INFO:     Started reloader process [15448] using StatReload
 INFO:     Started server process [15450]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+```
 
 ### Frontend Setup
-In a separate terminal:
+
+8. In a separate terminal, set up the frontend app:
 
 ```
 cd bookchat-frontend 
@@ -98,7 +108,7 @@ npm install
 npm run dev
 ```
 
-- The app will be available at http://localhost:5173.
+- Your bookchat app should be available at http://localhost:5173.
 
 ### Sample Queries
 What are the best books on computing?
