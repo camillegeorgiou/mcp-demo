@@ -1,17 +1,17 @@
 # Elastic Book Chat
 
-Elastic Book Chat is a conversational book recommendation demo using:
+The book chat app is a conversational book recommendation demo incorporating:
 
 - Azure OpenAI (GPT-4o)
 - Elastic with MCP (https://github.com/elastic/mcp-server-elasticsearch?tab=readme-ov-file)
 - FastAPI backend
 - Vite + React frontend
 
-It allows users to query a book database in natural language and receive helpful, librarian-style responses powered by real search results.
+The app allows users to query a book database in natural language and receive helpful, librarian-style responses powered by real search results.
 
 ---
 
-## Features
+### Features
 
 - Natural language search over books via Elastic MCP
 - GPT-4o used for response generation and formatting
@@ -21,7 +21,7 @@ It allows users to query a book database in natural language and receive helpful
 
 ---
 
-## Tech Stack
+### Tech Stack
 
 | Component    | Technology                  |
 |--------------|-----------------------------|
@@ -33,7 +33,7 @@ It allows users to query a book database in natural language and receive helpful
 
 ---
 
-## Getting Started
+### Getting Started
 
 Pre-reqs: 
 - Elasticsearch cluster
@@ -42,6 +42,7 @@ Pre-reqs:
 - Azure openAI key
 
 ### Set Up and Data Ingest
+
 1. Clone the repository
 
 ```
@@ -88,7 +89,7 @@ INFO:     Started server process [15450]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 
-# Frontend Setup
+### Frontend Setup
 In a separate terminal:
 
 ```
@@ -99,7 +100,7 @@ npm run dev
 
 - The app will be available at http://localhost:5173.
 
-## Sample Queries
+### Sample Queries
 What are the best books on computing?
 Which books have the highest rating?
 Any good biographies for young readers?
