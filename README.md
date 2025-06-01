@@ -41,7 +41,7 @@ Pre-reqs:
 - Kaggle API key (optional - see below)
 - Azure openAI key
 
-### Set Up and Data Ingest
+### Set Up/Data Ingest
 
 1. Clone down the repository and navigate to the mcp-demo folder:
 
@@ -98,7 +98,7 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 ```
 
-### Frontend Setup
+### Frontend
 
 8. In a separate terminal, set up the frontend app:
 
