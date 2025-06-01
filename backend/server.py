@@ -23,7 +23,7 @@ class ChatRequest(BaseModel):
     history: list[str] = []  
 
 async def run_agent_with_query(query: str, history: list[str] = []) -> str:
-    client = MCPClient.from_config_file("elasticsearch_mcp.json")
+    client = MCPClient.from_config_file("backend/elasticsearch_mcp.json")
     llm = AzureChatOpenAI(
         openai_api_version="2025-01-01-preview",
         azure_deployment="gpt-4o",
