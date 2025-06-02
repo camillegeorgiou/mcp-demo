@@ -94,7 +94,8 @@ llm = AzureChatOpenAI(
 7. Start the backend
 
 ```
-uvicorn backend.server:app --reload
+uvicorn backend.server:app --reload or .venv/bin/uvicorn server:app --reload
+
 ```
 
 - You should see the following output (or similar):
