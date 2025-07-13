@@ -134,7 +134,6 @@ button {
   font-weight: 600;
 }
 
-/* Tablet adjustments */
 @media (max-width: 768px) {
   .chat-title {
     font-size: 24px;
